@@ -1,0 +1,162 @@
+<html>
+      <head>
+	        <title>@Maya.com</title>
+			<title>Registration</title>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> 
+			  <style type="text/css">
+			  
+			          body{
+			              padding:0;
+				          margin:0;
+			  
+			  
+			           }
+					   
+			       #maya_com_homepage_image   {
+					             background-image:url("homepageimage1.jpg");
+					             background-repeat:no-repeat;
+								 background-size:cover;
+								 height:1000px;
+								 
+					       }
+						   
+				    		#upperdiv{
+							        height:130px;
+									background-color:blue;
+									text-align:left;
+							
+							} 
+							
+                            #logo{
+						         position:relative;
+								 left:40px;
+								 top:10px;
+								 color:white;
+								 font-size:400%;
+						   
+						   }
+                         
+                           #sublogo{
+						         position:relative;
+								 left:40px;
+								 top:-45px;
+								 color:white;
+								 font-size:180%;
+						   
+						   }
+
+                          #dashbord{
+								 position:relative;
+								 left:1330px;
+								 top:-155px;
+								 padding:10px;
+								 text-align:center;
+								 border-radius:20px;
+								 font-size:130%;
+								 width:150px;
+								 background-color:black;
+								   color:white;
+						  
+						  }
+
+                          #dashbord_section{
+						               height:600px;
+									   width:360px;
+									   background-color:white;
+									   position:fixed;
+									   left:1155;
+									   top:0;
+									   border:2px black solid;
+									   
+						  
+						  }	
+						  
+						 
+                         
+                        #user_image_befor_login{
+						              border-radius:50%;
+									  width:90px;
+									  height:90px;
+									  margin:10px;
+									  border:2px black solid; 
+						
+						          }	
+                        #user_name{
+						           font-size:300%;
+								   position:relative;
+								   top:-130px;
+								   left:130px;
+						
+						}		
+						
+                       #hideDashbord{
+					               position:relative;
+								   top:-160;
+								   left:5px;
+								   font-size:150%;
+								   margin:10px;
+								   border-radius:10px;
+								   padding:5px;
+								   background-color:black;
+								   color:white;
+					   
+					   
+					   }
+
+                       #diveder{
+					            border:2px black solid;
+								position:relative;
+								top:-170px;
+								
+					   }	
+                        
+                        a{
+						   text-decoration:none;
+						   color:black;
+						}						
+						  						   
+						  
+						  
+			  </style>
+       </head>
+       <body>
+             <div id="maya_com_homepage_image">
+			    <div id="upperdiv">
+				    <p id="logo">@Maya.com</p>
+					<p id="sublogo">Ready for learning.</p>
+					<button id="dashbord">Dashbord</button>
+					<div id="dashbord_section" style="display:none">
+					     <img src="user_image_befor_login.png" id="user_image_befor_login">
+						 <p id="user_name"><a href="login.html">log in<a></p>
+						 <button id="hideDashbord">Hide Dashbord</button>	 
+						 <p id="diveder"></p>
+					
+					</div>
+					
+				</div>
+			 </div>
+			 <script type="text/javascript">
+			       
+				    /*this is for fadein dashbord_section and fadeOut dashbord using  dashbord as button*/      
+			        $("#dashbord").click(function(){
+				        if($("#dashbord_section").css("display")=="none"){
+						                      $("#dashbord_section").fadeIn();
+											  $("#dashbord").fadeOut();
+											}
+											});
+											
+					/*this is fade in dashbord and fadeOut dashbord_section using dashbord_section as button*/						
+	                 $("#hideDashbord").click(function(){
+				        if($("#dashbord_section").css("display")!="none"){
+						                      $("#dashbord_section").fadeOut();
+											  $("#dashbord").fadeIn();
+											}
+											}); 
+                    var name_Of_User = sessionStorage.getItem("name_of_user");
+                    console.log(name_Of_User);					
+			 
+			 </script>
+       </body>
+</html>	   
+			  
